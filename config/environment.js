@@ -6,16 +6,26 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    apiURL: 'http://localhost:9000',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
     },
-
+    contentSecurityPolicy: {
+      'connect-src': "http://localhost:9000"
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    'simple-auth': {
+      authorizer: 'simple-auth-authorizer:oauth2-bearer',
+      crossOriginWhitelist: ['http://localhost:9000']
+    },
+    'simple-auth-oauth2': {
+      serverTokenEndpoint: 'http://localhost:9000/token'
     }
   };
 
