@@ -18,6 +18,10 @@
                 <h4>Followers</h4>
                 <p>{{model.user.numberOfFollowers}}</p>
             {{/link-to}}
+
+            {{#unless userIsProfile}}
+                {{follow-button profile=model.user}}
+            {{/unless}}
         </ul>
 
     </div>
