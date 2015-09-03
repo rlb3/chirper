@@ -54,10 +54,10 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiURL = 'https://my-chirper-api.herokuapp.com';
-    ENV.contentSecurityPolicy['connect-src'] = 'https://my-chirper-api.herokuapp.com';
-    ENV['simple-auth'].crossOriginWhitelist = ['https://my-chirper-api.herokuapp.com'];
-    ENV['simple-auth-oauth2'].serverTokenEndpoint = 'https://my-chirper-api.herokuapp.com/token';
+    ENV.apiURL = 'https://rlb3-chirper-api.herokuapp.com';
+    ENV.contentSecurityPolicy['connect-src'] = 'https://rlb3-chirper-api.herokuapp.com';
+    ENV['simple-auth'].crossOriginWhitelist = ['https://rlb3-chirper-api.herokuapp.com'];
+    ENV['simple-auth-oauth2'].serverTokenEndpoint = 'https://rlb3-chirper-api.herokuapp.com/token';
   }
 
   return ENV;
